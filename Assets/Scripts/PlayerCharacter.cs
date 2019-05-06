@@ -12,7 +12,7 @@ public class PlayerCharacter : MonoBehaviour
 
     void Start()
     {
-        colors = new string[]{"Cian","Magenta","Amarillo"};
+        colors = new string[]{"Azul","Rojo","Amarillo"};
         currentColor = colors[0];
         colorIterator = 0;
     }

@@ -8,6 +8,7 @@ public class LaserScript : MonoBehaviour
 {
     [SerializeField] private float raycastDistance = 30f;
     [SerializeField] private GameObject otherPlayer;
+    [SerializeField] private float alpha;
 
     private BoxCollider2D collider;
     private LineRenderer line;
@@ -86,14 +87,14 @@ public class LaserScript : MonoBehaviour
     {
     	firstColorName=transform.parent.gameObject.GetComponent<PlayerCharacter>().getCurrentColor();
     	switch(firstColorName){
-    		case "Cian":
-    			firstRayColor = Color.cyan;
+    		case "Azul":
+    			firstRayColor = new Color(0,0,1,alpha);
     			break;
-    		case "Magenta":
-    			firstRayColor = Color.magenta;
+    		case "Rojo":
+    			firstRayColor = new Color(1,0,0,alpha);
     			break;
     		case "Amarillo":
-    			firstRayColor = Color.yellow;
+    			firstRayColor = new Color(1,1,0,alpha);
     			break;
     	}
     }
@@ -106,17 +107,17 @@ public class LaserScript : MonoBehaviour
     	{
     		secondRayColor=firstRayColor;
     	}
-    	else if((otherRayColor == "Cian" && firstColorName=="Magenta")||(otherRayColor == "Magenta" && firstColorName=="Cian"))
+    	else if((otherRayColor == "Azul" && firstColorName=="Rojo")||(otherRayColor == "Rojo" && firstColorName=="Azul"))
     	{
-    		secondRayColor = new Color(1,1,1,1);
+    		secondRayColor = new Color(1,0,1,alpha);
     	}
-    	else if((otherRayColor == "Cian" && firstColorName=="Amarillo")||(otherRayColor == "Amarillo" && firstColorName=="Cian"))
+    	else if((otherRayColor == "Azul" && firstColorName=="Amarillo")||(otherRayColor == "Amarillo" && firstColorName=="Azul"))
     	{
-    		secondRayColor = new Color(1,1,1,1);
+    		secondRayColor = new Color(0,1,0,alpha);
     	}
-    	else if((otherRayColor == "Amarillo" && firstColorName=="Magenta")||(otherRayColor == "Magenta" && firstColorName=="Amarillo"))
+    	else if((otherRayColor == "Amarillo" && firstColorName=="Rojo")||(otherRayColor == "Rojo" && firstColorName=="Amarillo"))
     	{
-    		secondRayColor = new Color(1,1,1,1);
+    		secondRayColor = new Color(1,0.64f,0,alpha);
     	}
 
     }
