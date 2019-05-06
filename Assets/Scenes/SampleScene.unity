@@ -251,7 +251,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!61 &312578350
 BoxCollider2D:
@@ -277,7 +277,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 30}
+  m_Size: {x: 0.05, y: 30}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -760,7 +760,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!61 &1210480149
 BoxCollider2D:
@@ -786,7 +786,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 30}
+  m_Size: {x: 0.05, y: 30}
   m_EdgeRadius: 0
 --- !u!114 &1210480150
 MonoBehaviour:
