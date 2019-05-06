@@ -766,10 +766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca2aedf052194e41bfd3b76ca816746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForward: 273
-  moveBackward: 274
-  moveRight: 275
-  moveLeft: 276
+  moveForward: 105
+  moveBackward: 107
+  moveRight: 108
+  moveLeft: 106
   shootKey: 13
   swapColor: 39
   speedRotation: 100
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   moveRight: 100
   moveLeft: 97
   shootKey: 116
-  swapColor: 114
+  swapColor: 121
   speedRotation: 100
   speedForward: 5
 --- !u!114 &1271213681
