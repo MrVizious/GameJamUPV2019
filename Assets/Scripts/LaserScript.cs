@@ -11,13 +11,14 @@ public class LaserScript : MonoBehaviour
     private BoxCollider2D collider;
     private LineRenderer line;
     private LayerMask mask;
-    //private GameObject secondaryLaser;
+    private GameObject secondaryLaser;
     void Start()
     {
         mask = tag == "Laser1" ? 1 << LayerMask.NameToLayer("Laser2") : 1 << LayerMask.NameToLayer("Laser1");
         collider = GetComponent<BoxCollider2D>();
         line = GetComponent<LineRenderer>();
-        //secondaryLaser = transform.Find("SecondaryLaser").gameObject;
+        secondaryLaser = transform.Find("SecondaryLaser").gameObject;
+        secondaryLaser.GetComponent<LineRenderer>().enabled=false;
     }
 
     private void Update()
@@ -27,6 +28,7 @@ public class LaserScript : MonoBehaviour
 			Shoot();
     	}else
     	{
+    		secondaryLaser.GetComponent<LineRenderer>().enabled=false;
     		this.gameObject.GetComponent<LineRenderer>().enabled=false;
 			this.gameObject.GetComponent<BoxCollider2D>().enabled=false;
     	}
@@ -44,12 +46,11 @@ public class LaserScript : MonoBehaviour
         }
         else
         {
+        	secondaryLaser.GetComponent<LineRenderer>().enabled=false;
         	line.SetPosition(0, transform.position);
             line.SetPosition(1, transform.position + transform.up * 30f);
     		this.gameObject.GetComponent<LineRenderer>().enabled=true;
     		this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
-
-            //secondaryLaser.SetActive(false);
         }
     }
 
@@ -60,8 +61,13 @@ public class LaserScript : MonoBehaviour
         //Debug.Log(hit.point);
         line.SetPosition(0, transform.position);
         line.SetPosition(1, hit.point);
-    	this.gameObject.GetComponent<LineRenderer>().enabled=true;
+        this.gameObject.GetComponent<LineRenderer>().enabled=true;
     	this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
+
+    	secondaryLaser.GetComponent<LineRenderer>().SetPosition(0, hit.point);
+		secondaryLaser.GetComponent<LineRenderer>().SetPosition(1, transform.up*30f);
+        secondaryLaser.GetComponent<LineRenderer>().enabled=true;
+    	
         //Debug.Log("MergeLaser from: " + tag);
     }
 }
