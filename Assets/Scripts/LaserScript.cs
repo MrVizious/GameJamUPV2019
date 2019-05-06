@@ -37,7 +37,7 @@ public class LaserScript : MonoBehaviour
         }
         else
         {
-            line.SetPosition(1, Vector2.up * 30f);
+            line.SetPosition(1, transform.position + transform.up * 30f);
             //secondaryLaser.SetActive(false);
         }
     }
