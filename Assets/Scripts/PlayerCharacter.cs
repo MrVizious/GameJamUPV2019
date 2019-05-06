@@ -35,7 +35,6 @@ public class PlayerCharacter : MonoBehaviour
    			colorIterator=0;
    			currentColor = colors[colorIterator];
    		}
-   		Debug.Log(currentColor);
    	}
    	public string getCurrentColor ()
    	{

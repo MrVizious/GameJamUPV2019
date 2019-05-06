@@ -7,21 +7,25 @@ using UnityEngine;
 public class LaserScript : MonoBehaviour
 {
     [SerializeField] private float raycastDistance = 30f;
+    [SerializeField] private GameObject otherPlayer;
 
     private BoxCollider2D collider;
     private LineRenderer line;
     private LayerMask mask;
-    private GameObject secondaryLaser;
+    private LineRenderer secondaryLaser;
 
+    private string firstColorName;
     private Color firstRayColor;
+    private Color secondRayColor;
+    private string otherRayColor;
 
     void Start()
     {
         mask = tag == "Laser1" ? 1 << LayerMask.NameToLayer("Laser2") : 1 << LayerMask.NameToLayer("Laser1");
         collider = GetComponent<BoxCollider2D>();
         line = GetComponent<LineRenderer>();
-        secondaryLaser = transform.Find("SecondaryLaser").gameObject;
-        secondaryLaser.GetComponent<LineRenderer>().enabled=false;
+        secondaryLaser = transform.Find("SecondaryLaser").gameObject.GetComponent<LineRenderer>();
+        secondaryLaser.enabled=false;
     }
 
     private void Update()
@@ -31,7 +35,7 @@ public class LaserScript : MonoBehaviour
 			Shoot();
     	}else
     	{
-    		secondaryLaser.GetComponent<LineRenderer>().enabled=false;
+    		secondaryLaser.enabled=false;
     		this.gameObject.GetComponent<LineRenderer>().enabled=false;
 			this.gameObject.GetComponent<BoxCollider2D>().enabled=false;
     	}
@@ -51,7 +55,7 @@ public class LaserScript : MonoBehaviour
         }
         else
         {
-        	secondaryLaser.GetComponent<LineRenderer>().enabled=false;
+        	secondaryLaser.enabled=false;
         	line.SetPosition(0, transform.position);
             line.SetPosition(1, transform.position + transform.up * 30f);
     		this.gameObject.GetComponent<LineRenderer>().enabled=true;
@@ -61,6 +65,7 @@ public class LaserScript : MonoBehaviour
 
     private void MergeLaser(RaycastHit2D hit)
     {
+    	mixColors();
         //Debug.Log("Transform up: "+ transform.up);
         //Debug.Log("Distance: "+ Vector2.Distance(transform.parent.transform.position,hit.point));
         //Debug.Log(hit.point);
@@ -69,16 +74,18 @@ public class LaserScript : MonoBehaviour
         this.gameObject.GetComponent<LineRenderer>().enabled=true;
     	this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
 
-    	secondaryLaser.GetComponent<LineRenderer>().SetPosition(0, hit.point);
-		secondaryLaser.GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up * 30f);
-        secondaryLaser.GetComponent<LineRenderer>().enabled=true;
+    	secondaryLaser.SetPosition(0, hit.point);
+		secondaryLaser.SetPosition(1, transform.position + transform.up * 30f);
+		secondaryLaser.SetColors(secondRayColor,secondRayColor);
+        secondaryLaser.enabled=true;
     	
         //Debug.Log("MergeLaser from: " + tag);
     }
 
     private void setFirstRayColor()
     {
-    	switch(transform.parent.gameObject.GetComponent<PlayerCharacter>().getCurrentColor()){
+    	firstColorName=transform.parent.gameObject.GetComponent<PlayerCharacter>().getCurrentColor();
+    	switch(firstColorName){
     		case "Cian":
     			firstRayColor = Color.cyan;
     			break;
@@ -91,4 +98,28 @@ public class LaserScript : MonoBehaviour
     	}
     }
 
+    private void mixColors()
+    {
+    	otherRayColor = otherPlayer.GetComponent<PlayerCharacter>().getCurrentColor();
+
+    	if(otherRayColor==firstColorName)
+    	{
+    		secondRayColor=firstRayColor;
+    	}
+    	else if((otherRayColor == "Cian" && firstColorName=="Magenta")||(otherRayColor == "Magenta" && firstColorName=="Cian"))
+    	{
+    		secondRayColor = new Color(1,1,1,1);
+    	}
+    	else if((otherRayColor == "Cian" && firstColorName=="Amarillo")||(otherRayColor == "Amarillo" && firstColorName=="Cian"))
+    	{
+    		secondRayColor = new Color(1,1,1,1);
+    	}
+    	else if((otherRayColor == "Amarillo" && firstColorName=="Magenta")||(otherRayColor == "Magenta" && firstColorName=="Amarillo"))
+    	{
+    		secondRayColor = new Color(1,1,1,1);
+    	}
+
+    }
+
 }
+

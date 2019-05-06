@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastDistance: 30
+  otherPlayer: {fileID: 1271213677}
 --- !u!120 &312578349
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -943,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastDistance: 30
+  otherPlayer: {fileID: 993811080}
 --- !u!1 &1271213677
 GameObject:
   m_ObjectHideFlags: 0
