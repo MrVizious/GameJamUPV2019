@@ -6,16 +6,21 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserScript : MonoBehaviour
 {
+    [SerializeField]
+    private float raycastDistance = 30f;
     private BoxCollider2D collider;
     private LineRenderer line;
-
+    private LayerMask mask;
+    //private GameObject secondaryLaser;
     void Start()
     {
+        mask = tag == "Laser1" ? 1 << LayerMask.NameToLayer("Laser2") : 1 << LayerMask.NameToLayer("Laser1");
         collider = GetComponent<BoxCollider2D>();
         line = GetComponent<LineRenderer>();
+        //secondaryLaser = transform.Find("SecondaryLaser").gameObject;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Shoot();
     }
@@ -23,23 +28,28 @@ public class LaserScript : MonoBehaviour
     private void Shoot()
     {
         // Cast a ray straight forward.
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up);
-        //Debug.DrawRay(transform.position, transform.up, Color.green, 2);
-        foreach (RaycastHit2D hit in hits)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, raycastDistance, mask);
+        Debug.DrawRay(transform.position, transform.up * 30f, Color.green, 0.2f);
+        if (hit.collider != null)
         {
-            if (hit.collider != null)
-            {
-                if ((hit.collider.gameObject.tag == "Laser2" && this.tag == "Laser1") ||
-                    (hit.collider.gameObject.tag == "Laser1" && this.tag == "Laser2"))
-                {
-                    MergeLaser();
-                }
-            }
+            //secondaryLaser.SetActive(true);
+            MergeLaser(hit);
+        }
+        else
+        {
+            line.SetPosition(1, Vector2.up * 30f);
+            //secondaryLaser.SetActive(false);
         }
     }
 
-    private void MergeLaser()
+    private void MergeLaser(RaycastHit2D hit)
     {
-        Debug.Log("MergeLaser from: " + tag);
+        //Debug.Log("Transform up: "+ transform.up);
+        //Debug.Log("Distance: "+ Vector2.Distance(transform.parent.transform.position,hit.point));
+        //Debug.Log(hit.point);
+        line.SetPosition(0, transform.position);
+        line.SetPosition(1, hit.point);
+
+        //Debug.Log("MergeLaser from: " + tag);
     }
 }
