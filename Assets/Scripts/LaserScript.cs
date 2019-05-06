@@ -8,6 +8,7 @@ public class LaserScript : MonoBehaviour
 {
     private BoxCollider2D collider;
     private LineRenderer line;
+
     void Start()
     {
         collider = GetComponent<BoxCollider2D>();
@@ -16,10 +17,29 @@ public class LaserScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log("Raycast shooting!");
-        // Cast a ray straight forward.
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-        Debug.DrawRay(transform.position, transform.up, Color.green, 2);
+        Shoot();
     }
 
+    private void Shoot()
+    {
+        // Cast a ray straight forward.
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up);
+        //Debug.DrawRay(transform.position, transform.up, Color.green, 2);
+        foreach (RaycastHit2D hit in hits)
+        {
+            if (hit.collider != null)
+            {
+                if ((hit.collider.gameObject.tag == "Laser2" && this.tag == "Laser1") ||
+                    (hit.collider.gameObject.tag == "Laser1" && this.tag == "Laser2"))
+                {
+                    MergeLaser();
+                }
+            }
+        }
+    }
+
+    private void MergeLaser()
+    {
+        Debug.Log("MergeLaser from: " + tag);
+    }
 }
