@@ -696,8 +696,8 @@ MonoBehaviour:
   moveBackward: 274
   moveRight: 275
   moveLeft: 276
-  shootKey: 8
-  swapColor: 48
+  shootKey: 13
+  swapColor: 39
   speedRotation: 100
   speedForward: 5
 --- !u!212 &993811082

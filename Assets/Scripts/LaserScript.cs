@@ -117,7 +117,7 @@ public class LaserScript : MonoBehaviour
     	}
     	else if((otherRayColor == "Amarillo" && firstColorName=="Rojo")||(otherRayColor == "Rojo" && firstColorName=="Amarillo"))
     	{
-    		secondRayColor = new Color(1,0.64f,0,alpha);
+    		secondRayColor = new Color(1,0.5f,0,alpha);
     	}
 
     }
