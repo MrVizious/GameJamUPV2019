@@ -6,12 +6,15 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserScript : MonoBehaviour
 {
-    [SerializeField]
-    private float raycastDistance = 30f;
+    [SerializeField] private float raycastDistance = 30f;
+
     private BoxCollider2D collider;
     private LineRenderer line;
     private LayerMask mask;
     private GameObject secondaryLaser;
+
+    private Color firstRayColor;
+
     void Start()
     {
         mask = tag == "Laser1" ? 1 << LayerMask.NameToLayer("Laser2") : 1 << LayerMask.NameToLayer("Laser1");
@@ -39,6 +42,8 @@ public class LaserScript : MonoBehaviour
         // Cast a ray straight forward.
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, raycastDistance, mask);
         Debug.DrawRay(transform.position, transform.up * 30f, Color.green, 0.2f);
+        setFirstRayColor();
+        line.SetColors(firstRayColor,firstRayColor);
         if (hit.collider != null)
         {
             //secondaryLaser.SetActive(true);
@@ -70,4 +75,20 @@ public class LaserScript : MonoBehaviour
     	
         //Debug.Log("MergeLaser from: " + tag);
     }
+
+    private void setFirstRayColor()
+    {
+    	switch(transform.parent.gameObject.GetComponent<PlayerCharacter>().getCurrentColor()){
+    		case "Cian":
+    			firstRayColor = Color.cyan;
+    			break;
+    		case "Magenta":
+    			firstRayColor = Color.magenta;
+    			break;
+    		case "Amarillo":
+    			firstRayColor = Color.yellow;
+    			break;
+    	}
+    }
+
 }

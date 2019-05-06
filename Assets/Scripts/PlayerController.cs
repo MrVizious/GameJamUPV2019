@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private int lives = 3;
-
     [SerializeField] private KeyCode moveForward;
     [SerializeField] private KeyCode moveBackward;
     [SerializeField] private KeyCode moveRight;
     [SerializeField] private KeyCode moveLeft;
     [SerializeField] private KeyCode shootKey;
+    [SerializeField] private KeyCode swapColor;
 
     private GameObject laser;
     private bool shoot;
@@ -63,9 +61,13 @@ public class PlayerController : MonoBehaviour
             shoot=false;
         }
 
+        if(Input.GetKeyDown(swapColor))
+        {
+            this.gameObject.GetComponent<PlayerCharacter>().nextColor();
+        }
+
     }
 
     public bool getShoot(){return shoot;}
 
-    //TODO: Method Hurt
 }
