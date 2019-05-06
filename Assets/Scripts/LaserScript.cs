@@ -22,7 +22,14 @@ public class LaserScript : MonoBehaviour
 
     private void Update()
     {
-        Shoot();
+    	if(transform.parent.gameObject.GetComponent<PlayerController>().getShoot())
+    	{
+			Shoot();
+    	}else
+    	{
+    		this.gameObject.GetComponent<LineRenderer>().enabled=false;
+			this.gameObject.GetComponent<BoxCollider2D>().enabled=false;
+    	}
     }
 
     private void Shoot()
@@ -37,7 +44,11 @@ public class LaserScript : MonoBehaviour
         }
         else
         {
+        	line.SetPosition(0, transform.position);
             line.SetPosition(1, transform.position + transform.up * 30f);
+    		this.gameObject.GetComponent<LineRenderer>().enabled=true;
+    		this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
+
             //secondaryLaser.SetActive(false);
         }
     }
@@ -49,7 +60,8 @@ public class LaserScript : MonoBehaviour
         //Debug.Log(hit.point);
         line.SetPosition(0, transform.position);
         line.SetPosition(1, hit.point);
-
+    	this.gameObject.GetComponent<LineRenderer>().enabled=true;
+    	this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
         //Debug.Log("MergeLaser from: " + tag);
     }
 }

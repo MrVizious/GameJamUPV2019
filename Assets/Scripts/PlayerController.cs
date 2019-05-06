@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode shootKey;
 
     private GameObject laser;
+    private bool shoot;
 
 
 
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         laser = transform.Find("Laser").gameObject;
+        shoot=false;
     }
 
     // Update is called once per frame
@@ -54,15 +56,16 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(shootKey))
         {
-            laser.SetActive(true);
-
+            shoot=true;
         }
         else
         {
-            laser.SetActive(false);
+            shoot=false;
         }
 
     }
+
+    public bool getShoot(){return shoot;}
 
     //TODO: Method Hurt
 }
