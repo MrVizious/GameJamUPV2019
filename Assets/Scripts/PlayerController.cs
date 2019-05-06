@@ -13,10 +13,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode moveLeft;
     [SerializeField] private KeyCode shootKey;
 
+    private GameObject laser;
+
 
 
     public float speedRotation = 250;
     public float speedForward = 5;
+
+    private void Start()
+    {
+        laser = transform.Find("Laser").gameObject;
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,12 +52,14 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, speedRotation * Time.deltaTime));
         }
 
-        if (Input.GetKeyDown(shootKey))
+        if (Input.GetKey(shootKey))
         {
-            Debug.Log("Raycast shooting!");
-            // Cast a ray straight forward.
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-            Debug.DrawRay(transform.position, transform.up, Color.green, 2);
+            laser.SetActive(true);
+
+        }
+        else
+        {
+            laser.SetActive(false);
         }
 
     }
