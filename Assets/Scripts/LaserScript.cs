@@ -65,7 +65,7 @@ public class LaserScript : MonoBehaviour
     	this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
 
     	secondaryLaser.GetComponent<LineRenderer>().SetPosition(0, hit.point);
-		secondaryLaser.GetComponent<LineRenderer>().SetPosition(1, transform.up*30f);
+		secondaryLaser.GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up * 30f);
         secondaryLaser.GetComponent<LineRenderer>().enabled=true;
     	
         //Debug.Log("MergeLaser from: " + tag);
