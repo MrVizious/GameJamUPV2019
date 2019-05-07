@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public float speedRotation = 250;
     public float speedForward = 5;
+    private float angle=90;
 
     private void Start()
     {
@@ -47,10 +48,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(moveRight))
         {
             transform.Rotate(new Vector3(0, 0, -speedRotation * Time.deltaTime));
+            angle+=-speedRotation * Time.deltaTime;
         }
         else if (Input.GetKey(moveLeft))
         {
             transform.Rotate(new Vector3(0, 0, speedRotation * Time.deltaTime));
+            angle+= speedRotation * Time.deltaTime;
         }
 
         if (Input.GetKey(shootKey))
@@ -68,7 +71,25 @@ public class PlayerController : MonoBehaviour
         }
 
         spritePlayer.transform.position=this.transform.position;
+        if(angle < 0){angle = 360+angle;}
+        else if(angle>=360){angle=angle-360;}
 
+        if(angle <= 45 || angle > 360-45)
+        {
+
+        }
+        else if(angle > 45 && angle <= 135)
+        {
+
+        }
+        else if(angle > 135 && angle <= 225)
+        {
+            
+        }
+        else if(angle > 225 && angle <= 315)
+        {
+            
+        }
 
     }
 
