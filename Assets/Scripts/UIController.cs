@@ -14,6 +14,8 @@ public class UIController : MonoBehaviour
 	[SerializeField] private GameObject colorsObjectOne;
 	[SerializeField] private GameObject colorsObjectTwo;
 
+    [SerializeField] private Text time;
+
     
     void Start()
     {
