@@ -28,6 +28,7 @@ public class LaserScript : MonoBehaviour
     void Start()
     {
         mask = tag == "Laser1" ? 1 << LayerMask.NameToLayer("Laser2") : 1 << LayerMask.NameToLayer("Laser1");
+        //mask = mask || 1 << LayerMask.NameToLayer("Enemy");
         collider = GetComponent<BoxCollider2D>();
         line = GetComponent<LineRenderer>();
         secondaryLaser = transform.Find("SecondaryLaser").gameObject.GetComponent<LineRenderer>();
