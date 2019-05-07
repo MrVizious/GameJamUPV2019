@@ -17,6 +17,7 @@ public class EnemyCharacter : MonoBehaviour
     }
 
     public void Die(){
+        
         Destroy(gameObject);
     }
 
@@ -30,4 +31,5 @@ public class EnemyCharacter : MonoBehaviour
             Die();
         }
     }
+   
 }
