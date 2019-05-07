@@ -27,8 +27,12 @@ public class EnemySpawner : MonoBehaviour
 
     public void Spawn(string color){
         float randomAngle = Random.Range(0f, 360f);
+<<<<<<< Updated upstream
         Vector2 spawnPosition = new Vector2(Mathf.Cos(randomAngle)*radius, Mathf.Sin(randomAngle)*radius);
         Debug.Log("Spawning enemy at: " + spawnPosition);
+=======
+        Vector2 spawnPosition = new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle));
+>>>>>>> Stashed changes
         if(color == "Azul"){
             GameObject enemy = Instantiate(prefabAzul, spawnPosition, Quaternion.identity);
             if(strongColors[0]) enemy.GetComponent<EnemyMovement>().setGoal( randomAngle >=180 ? player1 : player2);
@@ -45,10 +49,13 @@ public class EnemySpawner : MonoBehaviour
             else enemy.GetComponent<EnemyMovement>().setGoal(prism);
         }
     }
+<<<<<<< Updated upstream
 
     //TODO: Eliminar
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Space)) Spawn("Rojo");
     }
+=======
+>>>>>>> Stashed changes
     
 }
