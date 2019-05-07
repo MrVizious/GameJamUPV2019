@@ -1,15 +1,13 @@
 fileFormatVersion: 2
-guid: e38f8722dd4704d469e2bd0072b5e987
+guid: c5dcf8f232a73a2489a8af026edc3a7c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: abogado frente animado total_0
-    21300002: abogado frente animado total_1
-    21300004: abogado frente animado total_2
-    21300006: abogado frente animado total_3
-    21300008: abogado frente animado total_4
-    21300010: abogado frente animado total_5
-    21300012: abogado frente animado total_6
-    21300014: abogado frente animado total_7
+    21300000: abogado atras animado total_0
+    21300002: abogado atras animado total_1
+    21300004: abogado atras animado total_2
+    21300006: abogado atras animado total_3
+    21300008: abogado atras animado total_4
+    21300010: abogado atras animado total_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -92,161 +90,121 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: abogado frente animado total_0
+      name: abogado atras animado total_0
       rect:
         serializedVersion: 2
         x: 97
-        y: 29
-        width: 266
-        height: 453
-      alignment: 9
-      pivot: {x: 0.43989775, y: 0.5000005}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cc829407fd4e5d48aeb1b904ffd95c5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: abogado frente animado total_1
-      rect:
-        serializedVersion: 2
-        x: 444
         y: 23
-        width: 265
+        width: 263
         height: 454
       alignment: 9
-      pivot: {x: 0.43967077, y: 0.5058692}
+      pivot: {x: 0.59118176, y: 0.50000006}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e11c74c1a77f7a54382ec36626e1be0a
+      spriteID: eda537cbd05f2f744927bbc898355a9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: abogado frente animado total_2
+      name: abogado atras animado total_1
       rect:
         serializedVersion: 2
-        x: 771
-        y: 23
-        width: 266
-        height: 461
+        x: 541
+        y: 19
+        width: 263
+        height: 452
       alignment: 9
-      pivot: {x: 0.43989757, y: 0.5000001}
+      pivot: {x: 0.6114444, y: 0.4999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70ed49de47162bf44bfaf0c565f5a3bc
+      spriteID: e133bb6f3f8002949b9d069d59291224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: abogado frente animado total_3
+      name: abogado atras animado total_2
       rect:
         serializedVersion: 2
-        x: 1104
-        y: 23
-        width: 267
-        height: 454
+        x: 1083
+        y: 0
+        width: 263
+        height: 471
       alignment: 9
-      pivot: {x: 0.4501025, y: 0.49413115}
+      pivot: {x: 0.5810505, y: 0.5169715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22acb7568a13ab24e98ee98973bd4e8f
+      spriteID: 5a2ad1935d9c38440b05cd62ae626490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: abogado frente animado total_4
+      name: abogado atras animado total_3
       rect:
         serializedVersion: 2
-        x: 1509
-        y: 29
-        width: 265
-        height: 446
+        x: 1639
+        y: 12
+        width: 264
+        height: 465
       alignment: 9
-      pivot: {x: 0.43967056, y: 0.49402577}
+      pivot: {x: 0.5706505, y: 0.4999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaa73987fe6dc3c499a60f3ce3f22daf
+      spriteID: a840f82aa3550ab47ac33590342b5ca3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: abogado frente animado total_5
+      name: abogado atras animado total_4
       rect:
         serializedVersion: 2
-        x: 1874
-        y: 29
-        width: 265
-        height: 448
+        x: 2108
+        y: 19
+        width: 264
+        height: 463
       alignment: 9
-      pivot: {x: 0.42961565, y: 0.50000006}
+      pivot: {x: 0.59083605, y: 0.4999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fb72850f3310db419b50ffbf21a1d00
+      spriteID: a33348e0432a48f42aaae615de1a3c53
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: abogado frente animado total_6
+      name: abogado atras animado total_5
       rect:
         serializedVersion: 2
-        x: 2300
-        y: 29
-        width: 265
-        height: 450
+        x: 2637
+        y: 19
+        width: 263
+        height: 463
       alignment: 9
-      pivot: {x: 0.42961565, y: 0.5000001}
+      pivot: {x: 0.5911814, y: 0.49424496}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 102bb549c67291144ae917241c80057c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: abogado frente animado total_7
-      rect:
-        serializedVersion: 2
-        x: 2651
-        y: 31
-        width: 266
-        height: 444
-      alignment: 9
-      pivot: {x: 0.4198613, y: 0.49399906}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 029c0ddbf099125448965f8ac06a742a
+      spriteID: c1e675ac93e9fa147aefce31c7a18bdd
       vertices: []
       indices: 
       edges: []
@@ -254,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e4682de3e5536034b933870b8fb86a42
+    spriteID: c9dfd0cffafec814f9ece08707e879ff
     vertices: []
     indices: 
     edges: []

@@ -80,22 +80,22 @@ public class PlayerController : MonoBehaviour
         else if(angle>=360){angle=angle-360;}
 
 
-        if(angle <= 45 || angle > 360-45)
+        if(angle <= 45 || angle > 360-45)//Derecha
         {
             anim.SetInteger("Direction",0);
             anim.SetFloat("walkDir",0.5f);
         }
-        else if(angle > 45 && angle <= 135)
+        else if(angle > 45 && angle <= 135)//Arriba
         {
             anim.SetInteger("Direction",1);
             anim.SetFloat("walkDir",0.1f);
         }
-        else if(angle > 135 && angle <= 225)
+        else if(angle > 135 && angle <= 225)//Izquierda
         {
             anim.SetInteger("Direction",2);
             anim.SetFloat("walkDir",0.3f);
         }
-        else if(angle > 225 && angle <= 315)
+        else if(angle > 225 && angle <= 315)//Abajo
         {
             anim.SetInteger("Direction",3);
             anim.SetFloat("walkDir",0.7f);
