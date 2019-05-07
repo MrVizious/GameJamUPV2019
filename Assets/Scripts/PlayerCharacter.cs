@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCharacter : MonoBehaviour
 {
     [SerializeField] private int health;
+    [SerializeField] private GameObject gameOver;
 
     private string[] colors;
     private string currentColor;
@@ -30,6 +31,7 @@ public class PlayerCharacter : MonoBehaviour
    			}
    			
    			health-=1;
+            if(health <= 0) Die();
    		}
    	}
    	public void nextColor()
@@ -53,6 +55,11 @@ public class PlayerCharacter : MonoBehaviour
    			Messenger<int>.Broadcast(GameEvent.PLAYER_TWO_COLOR,colorIterator);
    		}
    	}
+
+    public void Die(){
+        gameOver.GetComponent<GameOver>().Show();
+    }
+
    	public string getCurrentColor ()
    	{
    		return currentColor;
