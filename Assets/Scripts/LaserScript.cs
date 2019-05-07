@@ -77,6 +77,9 @@ public class LaserScript : MonoBehaviour
         // Rayo de daño a los enemigos
         RaycastHit2D hitEnemies = Physics2D.Raycast(transform.position, transform.up, raycastDistance, maskEnemies);
 
+        setFirstRayColor();
+        line.SetColors(firstRayColor,firstRayColor);
+        
         //Encuentra tanto láser como enemigo
         if(hitEnemies.collider != null){
             if(hit.collider !=null){

@@ -9,6 +9,6 @@ public class EnemyCharacter : MonoBehaviour
 
     public void Hurt(string rayColor){
         if(rayColor == color) health -= 0.7f * Time.deltaTime;
-        
+        Debug.Log("Life: "+ health);
     }
 }
