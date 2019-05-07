@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode shootKey;
     [SerializeField] private KeyCode swapColor;
     [SerializeField] private GameObject spritePlayer;
+    private  Animator anim;
 
     private GameObject laser;
     private bool shoot;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         laser = transform.Find("Laser").gameObject;
         shoot=false;
+        anim=spritePlayer.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -71,24 +73,26 @@ public class PlayerController : MonoBehaviour
         }
 
         spritePlayer.transform.position=this.transform.position;
+
         if(angle < 0){angle = 360+angle;}
         else if(angle>=360){angle=angle-360;}
 
+
         if(angle <= 45 || angle > 360-45)
         {
-
+            anim.SetInteger("Direction",0);
         }
         else if(angle > 45 && angle <= 135)
         {
-
+            anim.SetInteger("Direction",1);
         }
         else if(angle > 135 && angle <= 225)
         {
-            
+            anim.SetInteger("Direction",2);
         }
         else if(angle > 225 && angle <= 315)
         {
-            
+            anim.SetInteger("Direction",3);
         }
 
     }
