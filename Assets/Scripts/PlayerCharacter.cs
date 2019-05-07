@@ -17,7 +17,7 @@ public class PlayerCharacter : MonoBehaviour
         colorIterator = 0;
     }
 
-   	void Hurt(){
+   	public void Hurt(){
    		if(health>0)
    		{
    			if(this.name=="Player1")

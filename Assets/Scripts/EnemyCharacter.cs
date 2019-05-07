@@ -17,4 +17,9 @@ public class EnemyCharacter : MonoBehaviour
     public void Die(){
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        other.GetComponent<PlayerCharacter>().Hurt();
+        Die();
+    }
 }
