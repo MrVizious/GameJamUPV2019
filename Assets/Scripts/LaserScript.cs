@@ -69,7 +69,7 @@ public class LaserScript : MonoBehaviour
             canShoot = false;
         }
 
-        Debug.Log("Empezando a disparar");
+        //Debug.Log("Empezando a disparar");
 
         // Raycast de láser
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, raycastDistance, mask);
@@ -85,7 +85,7 @@ public class LaserScript : MonoBehaviour
             if(hit.collider !=null){
                 //Si encuentra antes el enemigo que el láser
                 if(Vector2.Distance(transform.position, hitEnemies.point) < Vector2.Distance(transform.position, hit.point) ){
-                    Debug.Log("Ha encontrado a un enemigo antes que a un láser");
+                    //Debug.Log("Ha encontrado a un enemigo antes que a un láser");
                     secondaryLaser.enabled=false;
                     line.SetPosition(0, transform.position);
                     line.SetPosition(1, transform.position + transform.up * Vector2.Distance(transform.position, hitEnemies.point));
@@ -95,7 +95,7 @@ public class LaserScript : MonoBehaviour
                 }
                 //Si encuentra antes el láser que el enemigo
                 else {
-                    Debug.Log("Ha encontrado a un láser antes que a un enemigo");
+                    //Debug.Log("Ha encontrado a un láser antes que a un enemigo");
                     MergeLaser(hit);
                     secondaryLaser.SetPosition(1, hitEnemies.point);
                     hitEnemies.collider.gameObject.GetComponent<EnemyCharacter>().Hurt(secondColorName);
@@ -103,7 +103,7 @@ public class LaserScript : MonoBehaviour
             }
             //Si sólo encuentra un enemigo
             else{
-                Debug.Log("Ha encontrado sólo un enemigo");
+                //Debug.Log("Ha encontrado sólo un enemigo");
                 secondaryLaser.enabled=false;
                 line.SetPosition(0, transform.position);
                 line.SetPosition(1, transform.position + transform.up * Vector2.Distance(transform.position, hitEnemies.point));
@@ -115,12 +115,12 @@ public class LaserScript : MonoBehaviour
         }
         //Si sólo encuentra un láser
         else if(hit.collider != null){
-            Debug.Log("Sólo ha encontrado un láser");
+            //Debug.Log("Sólo ha encontrado un láser");
             MergeLaser(hit);
         }
 
         else if(hit.collider == null || hitEnemies.collider == null){
-            Debug.Log("No ha encontrado nada");
+            //Debug.Log("No ha encontrado nada");
             secondaryLaser.enabled=false;
             line.SetPosition(0, transform.position);
             line.SetPosition(1, transform.position + transform.up * raycastDistance);

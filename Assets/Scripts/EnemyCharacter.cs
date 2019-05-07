@@ -9,7 +9,11 @@ public class EnemyCharacter : MonoBehaviour
     public string color;
 
     public void Hurt(string rayColor){
-        if(rayColor == color) health -= damage * Time.deltaTime;
+        Debug.Log("Recibiendo daño de color " + rayColor);
+        if(rayColor == color){
+            health -= damage * Time.deltaTime;
+            Debug.Log("Daño hecho porque este enemigo es de color " + color);
+        }
         if(health <= 0f) Die();
         //Debug.Log("Life: "+ health);
     }
@@ -19,8 +23,13 @@ public class EnemyCharacter : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Player") other.GetComponent<PlayerCharacter>().Hurt();
-        else if(other.tag == "Prism") other.GetComponent<Prism>().addColor(color);
-        Die();
+        if(other.tag == "Player"){
+            other.GetComponent<PlayerCharacter>().Hurt();
+            Die();
+        }
+        else if(other.tag == "Prism"){
+            other.GetComponent<Prism>().addColor(color);
+            Die();
+        }
     }
 }
