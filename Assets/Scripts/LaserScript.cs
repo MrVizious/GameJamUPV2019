@@ -11,6 +11,8 @@ public class LaserScript : MonoBehaviour
     [SerializeField] private float alpha;
     [SerializeField] private float dischargeRate = 5f;
     [SerializeField] private float chargeRate = 3.5f;
+    [SerializeField] private GameObject filledBar;
+
 
     private BoxCollider2D collider;
     private LineRenderer line;
@@ -24,6 +26,8 @@ public class LaserScript : MonoBehaviour
 
     private float percentageLoad = 100f;
     private bool canShoot = true;
+
+    private float scaleXIni=0.38f;
 
     void Start()
     {
@@ -51,14 +55,14 @@ public class LaserScript : MonoBehaviour
     		this.gameObject.GetComponent<LineRenderer>().enabled=false;
 			this.gameObject.GetComponent<BoxCollider2D>().enabled=false;
     	}
-        Debug.Log("Percentage load: " + percentageLoad);
+        filledBar.transform.localScale=new Vector2((scaleXIni * percentageLoad) /100f,0.186208f);
+
     }
 
     private void Shoot()
     {
         percentageLoad -= dischargeRate * Time.deltaTime;
         percentageLoad = Mathf.Clamp(percentageLoad, 0f, 100f);
-        Debug.Log("Discharging!");
         if(percentageLoad == 0f){
             canShoot = false;
         }

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode moveLeft;
     [SerializeField] private KeyCode shootKey;
     [SerializeField] private KeyCode swapColor;
+    [SerializeField] private GameObject spritePlayer;
 
     private GameObject laser;
     private bool shoot;
@@ -65,6 +66,9 @@ public class PlayerController : MonoBehaviour
         {
             this.gameObject.GetComponent<PlayerCharacter>().nextColor();
         }
+
+        spritePlayer.transform.position=this.transform.position;
+
 
     }
 
