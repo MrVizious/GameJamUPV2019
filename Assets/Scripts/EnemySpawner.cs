@@ -78,6 +78,7 @@ public class EnemySpawner : MonoBehaviour
         if(Time.time >= lastTime + spawnRate){
             SpawnRandom();
             spawnRate *= 0.95f;
+            spawnRate = Mathf.Clamp(spawnRate, 3f, 10f);
             lastTime = Time.time;
         }
     }
