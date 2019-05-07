@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     }
 
     public void LoadLevel(){
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Comic", LoadSceneMode.Single);
     }
 
     public void LoadSecret(){

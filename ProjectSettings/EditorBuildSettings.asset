@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CamaraSecreta.unity
     guid: 88a86babc11f33c4c8d958bfb8b0518c
+  - enabled: 1
+    path: Assets/Scenes/Comic.unity
+    guid: 5779e77415a9c4723ac357513123e3c2
   m_configObjects: {}
