@@ -1034,8 +1034,8 @@ MonoBehaviour:
   player2: {fileID: 993811083}
   prismTransform: {fileID: 1459697259}
   prism: {fileID: 1459697261}
-  spawnRate: 4
-  radius: 50
+  spawnRate: 7
+  radius: 40
   prefabAzul: {fileID: 9034733057428876648, guid: 3a7310214368d0b4a9d594e9c7ded6b3,
     type: 3}
   prefabAmarillo: {fileID: 5230911235315666996, guid: 79276039b1a51ba47bfaa0581d32cded,
