@@ -10,5 +10,6 @@ public class Temporizador : MonoBehaviour
     {
         tiempo+=Time.deltaTime;
         Debug.Log(tiempo);
+		Messenger<float>.Broadcast(GameEvent.TIME,tiempo);
     }
 }
