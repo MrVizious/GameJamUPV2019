@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode shootKey;
     [SerializeField] private KeyCode swapColor;
     [SerializeField] private GameObject spritePlayer;
+    
     private  Animator anim;
 
     private GameObject laser;
@@ -101,10 +102,6 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("walkDir",0.7f);
         }
 
-    }
-
-    public void Die(){
-        Debug.Log("Has muerto!");
     }
 
     public bool getShoot(){return shoot;}
