@@ -9,6 +9,8 @@ public class LaserScript : MonoBehaviour
     [SerializeField] private float raycastDistance = 30f;
     [SerializeField] private GameObject otherPlayer;
     [SerializeField] private float alpha;
+    [SerializeField] private float dischargeRate = 5f;
+    [SerializeField] private float chargeRate = 3.5f;
 
     private BoxCollider2D collider;
     private LineRenderer line;
@@ -19,6 +21,9 @@ public class LaserScript : MonoBehaviour
     private Color firstRayColor;
     private Color secondRayColor;
     private string otherRayColor;
+
+    private float percentageLoad = 100f;
+    private bool canShoot = true;
 
     void Start()
     {
@@ -31,19 +36,31 @@ public class LaserScript : MonoBehaviour
 
     private void Update()
     {
-    	if(transform.parent.gameObject.GetComponent<PlayerController>().getShoot())
+        
+    	if(transform.parent.gameObject.GetComponent<PlayerController>().getShoot() && canShoot)
     	{
 			Shoot();
     	}else
     	{
+            percentageLoad += chargeRate * Time.deltaTime;
+            percentageLoad = Mathf.Clamp(percentageLoad, 0f, 100f);
+            if(!canShoot && percentageLoad == 100f) canShoot = true;
+
     		secondaryLaser.enabled=false;
     		this.gameObject.GetComponent<LineRenderer>().enabled=false;
 			this.gameObject.GetComponent<BoxCollider2D>().enabled=false;
     	}
+        Debug.Log("Percentage load: " + percentageLoad);
     }
 
     private void Shoot()
     {
+        percentageLoad -= dischargeRate * Time.deltaTime;
+        percentageLoad = Mathf.Clamp(percentageLoad, 0f, 100f);
+        Debug.Log("Discharging!");
+        if(percentageLoad == 0f){
+            canShoot = false;
+        }
         // Cast a ray straight forward.
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, raycastDistance, mask);
         Debug.DrawRay(transform.position, transform.up * 30f, Color.green, 0.2f);
