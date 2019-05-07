@@ -8,8 +8,11 @@ public class EnemySpawner : MonoBehaviour
     public Transform player1;
     public Transform player2;
     public Transform prismTransform;
-
     public Prism prism;
+
+    public float spawnRate = 3f;
+
+    private float lastTime;
 
 
     [SerializeField] private float radius;
@@ -19,6 +22,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject prefabVioleta;
     [SerializeField] private GameObject prefabNaranja;
     [SerializeField] private GameObject prefabVerde;
+
+
+    private void Start() {
+        lastTime = Time.time;
+    }
 
     public void SpawnRandom(){
         switch((int) Random.Range(1.0f, 6.0f)){
@@ -67,7 +75,10 @@ public class EnemySpawner : MonoBehaviour
 
     //TODO: Eliminar
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Space)) Spawn("Rojo");
+        if(Time.time >= lastTime + spawnRate){
+            SpawnRandom();
+            spawnRate *= 0.95f;
+        }
     }
     
 }
