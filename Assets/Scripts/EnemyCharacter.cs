@@ -5,10 +5,16 @@ using UnityEngine;
 public class EnemyCharacter : MonoBehaviour
 {
     public float health = 1f;
+    public float damage = 1.5f;
     public string color;
 
     public void Hurt(string rayColor){
-        if(rayColor == color) health -= 0.7f * Time.deltaTime;
-        Debug.Log("Life: "+ health);
+        if(rayColor == color) health -= damage * Time.deltaTime;
+        if(health <= 0f) Die();
+        //Debug.Log("Life: "+ health);
+    }
+
+    public void Die(){
+        Destroy(gameObject);
     }
 }

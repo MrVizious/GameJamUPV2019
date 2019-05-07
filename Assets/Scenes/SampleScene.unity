@@ -417,6 +417,11 @@ PrefabInstance:
       propertyPath: goal
       value: 
       objectReference: {fileID: 1459697259}
+    - target: {fileID: 2311832561602470044, guid: 6a01b21eb0255544fafa9fa3bb2fd21e,
+        type: 3}
+      propertyPath: color
+      value: Violeta
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a01b21eb0255544fafa9fa3bb2fd21e, type: 3}
 --- !u!1 &312578346
