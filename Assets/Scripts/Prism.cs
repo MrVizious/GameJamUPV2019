@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Prism : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOver;
     public bool azulStrong, amarilloStrong, rojoStrong;
+    
 
     private void Start() {
         azulStrong = amarilloStrong = rojoStrong = false;
@@ -29,7 +31,7 @@ public class Prism : MonoBehaviour
     }
 
     private void GameOver(){
-        Debug.Log("You lost!");
+        gameOver.GetComponent<GameOver>().Show();
     }
 
 }

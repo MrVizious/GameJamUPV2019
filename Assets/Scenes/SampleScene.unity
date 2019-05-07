@@ -3619,6 +3619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a9b880e1ed5784387ecebdd046cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 418748173}
   azulStrong: 0
   amarilloStrong: 0
   rojoStrong: 0
