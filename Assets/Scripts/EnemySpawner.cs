@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     public Transform prismTransform;
     public Prism prism;
 
-    public float spawnRate = 3f;
+    public float spawnRate = 300f;
 
     private float lastTime;
 
@@ -78,6 +78,7 @@ public class EnemySpawner : MonoBehaviour
         if(Time.time >= lastTime + spawnRate){
             SpawnRandom();
             spawnRate *= 0.95f;
+            lastTime = Time.time;
         }
     }
     
