@@ -36,14 +36,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(moveForward))
         {
             transform.Translate(Vector2.up * Time.deltaTime * speedForward);
-
-
+            anim.SetBool("isWalking",true);
         }
         else if (Input.GetKey(moveBackward))
         {
             transform.Translate(Vector2.up * Time.deltaTime * -speedForward);
-
-
+            anim.SetBool("isWalking",true);
+        }
+        else
+        {
+            anim.SetBool("isWalking",false);
         }
         //Horizontal Rotation
 
@@ -81,18 +83,22 @@ public class PlayerController : MonoBehaviour
         if(angle <= 45 || angle > 360-45)
         {
             anim.SetInteger("Direction",0);
+            anim.SetFloat("walkDir",0.5f);
         }
         else if(angle > 45 && angle <= 135)
         {
             anim.SetInteger("Direction",1);
+            anim.SetFloat("walkDir",0.1f);
         }
         else if(angle > 135 && angle <= 225)
         {
             anim.SetInteger("Direction",2);
+            anim.SetFloat("walkDir",0.3f);
         }
         else if(angle > 225 && angle <= 315)
         {
             anim.SetInteger("Direction",3);
+            anim.SetFloat("walkDir",0.7f);
         }
 
     }
