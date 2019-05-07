@@ -79,7 +79,7 @@ public class LaserScript : MonoBehaviour
 
         setFirstRayColor();
         line.SetColors(firstRayColor,firstRayColor);
-        
+
         //Encuentra tanto láser como enemigo
         if(hitEnemies.collider != null){
             if(hit.collider !=null){
@@ -96,6 +96,7 @@ public class LaserScript : MonoBehaviour
                 else {
                     Debug.Log("Ha encontrado a un láser antes que a un enemigo");
                     MergeLaser(hit);
+                    secondaryLaser.SetPosition(1, hitEnemies.point);
                     hitEnemies.collider.gameObject.GetComponent<EnemyCharacter>().Hurt(secondColorName);
                 }
             }
