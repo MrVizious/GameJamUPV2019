@@ -19,7 +19,8 @@ public class EnemyCharacter : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        other.GetComponent<PlayerCharacter>().Hurt();
+        if(other.tag == "Player") other.GetComponent<PlayerCharacter>().Hurt();
+        else if(other.tag == "Prism") other.GetComponent<Prism>().addColor(color);
         Die();
     }
 }

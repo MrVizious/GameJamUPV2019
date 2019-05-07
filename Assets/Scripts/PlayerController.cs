@@ -97,6 +97,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void Die(){
+        Debug.Log("Has muerto!");
+    }
+
     public bool getShoot(){return shoot;}
 
 }
