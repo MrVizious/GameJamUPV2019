@@ -14,7 +14,7 @@ public class UIController : MonoBehaviour
 	[SerializeField] private GameObject colorsObjectOne;
 	[SerializeField] private GameObject colorsObjectTwo;
 
-    [SerializeField] private Text time;
+    [SerializeField] private GameObject time;
 
     
     void Start()
@@ -28,6 +28,8 @@ public class UIController : MonoBehaviour
 		colorsObjectTwo.GetComponent<Image>().sprite=colorSprites[0];
 		Messenger<int>.AddListener(GameEvent.PLAYER_ONE_COLOR, One_Color_Update);
      	Messenger<int>.AddListener(GameEvent.PLAYER_TWO_COLOR, Two_Color_Update);
+
+        Messenger<float>.AddListener(GameEvent.TIME, setTime);
 
     }
 
@@ -47,9 +49,15 @@ public class UIController : MonoBehaviour
     {
      	colorsObjectTwo.GetComponent<Image>().sprite=colorSprites[color];
     }
+    public void setTime(float t)
+    {
+        t=Mathf.FloorToInt(t);
+        time.GetComponent<Text>().text=t.ToString();
+    }
 
     private void OnDestroy()
     {
+        Messenger<float>.RemoveListener(GameEvent.TIME, setTime);
         Messenger<int>.RemoveListener(GameEvent.PLAYER_ONE_HURT, One_Life_Update);
         Messenger<int>.RemoveListener(GameEvent.PLAYER_TWO_HURT, Two_Life_Update);
         Messenger<int>.RemoveListener(GameEvent.PLAYER_ONE_COLOR, One_Color_Update);

@@ -8,4 +8,5 @@ public class GameEvent : MonoBehaviour
 	public const string PLAYER_TWO_HURT = "PLAYER_TWO_HURT";
 	public const string PLAYER_ONE_COLOR = "PLAYER_ONE_COLOR";
 	public const string PLAYER_TWO_COLOR = "PLAYER_TWO_COLOR";
+	public const string TIME = "TIME";
 }

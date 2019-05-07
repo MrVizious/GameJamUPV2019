@@ -4130,6 +4130,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: d9d7eb65fcdb64f67a13a6d4f4a8d098, type: 3}
   colorsObjectOne: {fileID: 1484635481}
   colorsObjectTwo: {fileID: 1989395707}
+  time: {fileID: 1346290367}
 --- !u!4 &1674256407
 Transform:
   m_ObjectHideFlags: 0
