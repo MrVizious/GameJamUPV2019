@@ -8,6 +8,7 @@ public class Prism : MonoBehaviour
 
     private void Start() {
         azulStrong = amarilloStrong = rojoStrong = false;
+        Time.timeScale = 1f;
     }
 
     public void addColor(string color){
