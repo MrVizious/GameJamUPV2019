@@ -235,6 +235,8 @@ MonoBehaviour:
   raycastDistance: 30
   otherPlayer: {fileID: 1271213677}
   alpha: 1
+  dischargeRate: 28
+  chargeRate: 20
 --- !u!120 &312578349
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1121,6 +1123,8 @@ MonoBehaviour:
   raycastDistance: 30
   otherPlayer: {fileID: 993811080}
   alpha: 1
+  dischargeRate: 28
+  chargeRate: 20
 --- !u!1 &1271213677
 GameObject:
   m_ObjectHideFlags: 0
