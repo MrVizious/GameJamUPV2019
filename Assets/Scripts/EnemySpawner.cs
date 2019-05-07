@@ -40,27 +40,28 @@ public class EnemySpawner : MonoBehaviour
     public void Spawn(string color){
         float randomAngle = Random.Range(0f, 360f);
         Vector2 spawnPosition = new Vector2(Mathf.Cos(randomAngle)*radius, Mathf.Sin(randomAngle)*radius);
+        GameObject enemy = null;
         //Debug.Log("Spawning enemy at: " + spawnPosition);
         if(color == "Azul"){
-            GameObject enemy = Instantiate(prefabAzul, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(prefabAzul, spawnPosition, Quaternion.identity);
             if(prism.azulStrong) enemy.GetComponent<EnemyMovement>().setGoal( randomAngle >=180 ? player1 : player2);
             else enemy.GetComponent<EnemyMovement>().setGoal(prismTransform);
         }
         else if(color == "Amarillo"){
-            GameObject enemy = Instantiate(prefabAmarillo, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(prefabAmarillo, spawnPosition, Quaternion.identity);
             if(prism.amarilloStrong) enemy.GetComponent<EnemyMovement>().setGoal( randomAngle >=180 ? player1 : player2);
             else enemy.GetComponent<EnemyMovement>().setGoal(prismTransform);
         }
         else if(color == "Rojo"){
-            GameObject enemy = Instantiate(prefabRojo, spawnPosition, Quaternion.identity);
+            enemy = Instantiate(prefabRojo, spawnPosition, Quaternion.identity);
             if(prism.rojoStrong) enemy.GetComponent<EnemyMovement>().setGoal( randomAngle >=180 ? player1 : player2);
             else enemy.GetComponent<EnemyMovement>().setGoal(prismTransform);
         }
         else{    
-            if(color == "Violeta") GameObject enemy = Instantiate(prefabVioleta, spawnPosition, Quaternion.identity);
-            else if(color == "Verde") GameObject enemy = Instantiate(prefabVerde, spawnPosition, Quaternion.identity);
-            else if(color == "Naranja") GameObject enemy = Instantiate(prefabNaranja, spawnPosition, Quaternion.identity);
-            enemy.GetComponent<EnemyMovement>().setGoal( randomAngle >=180 ? player1 : player2);
+            if(color == "Violeta") enemy = Instantiate(prefabVioleta, spawnPosition, Quaternion.identity);
+            else if(color == "Verde") enemy = Instantiate(prefabVerde, spawnPosition, Quaternion.identity);
+            else if(color == "Naranja") enemy = Instantiate(prefabNaranja, spawnPosition, Quaternion.identity);
+            if(enemy != null) enemy.GetComponent<EnemyMovement>().setGoal( randomAngle >=180 ? player1 : player2);
         }
     }
 
