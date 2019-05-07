@@ -34,7 +34,7 @@ public class LaserScript : MonoBehaviour
     void Start()
     {
         mask = tag == "Laser1" ? 1 << LayerMask.NameToLayer("Laser2") : 1 << LayerMask.NameToLayer("Laser1");
-        maskEnemies = 1 << LayerMask.NameToLayer("Enemy");
+        maskEnemies = 1 << LayerMask.NameToLayer("Enemy") | 1 << LayerMask.NameToLayer("Prism");
         collider = GetComponent<BoxCollider2D>();
         line = GetComponent<LineRenderer>();
         secondaryLaser = transform.Find("SecondaryLaser").gameObject.GetComponent<LineRenderer>();
@@ -91,6 +91,7 @@ public class LaserScript : MonoBehaviour
                     line.SetPosition(1, transform.position + transform.up * Vector2.Distance(transform.position, hitEnemies.point));
                     this.gameObject.GetComponent<LineRenderer>().enabled=true;
                     this.gameObject.GetComponent<BoxCollider2D>().enabled=true;
+                    if(hitEnemies.collider.gameObject.tag == "Enemy")hitEnemies.collider.gameObject.GetComponent<EnemyCharacter>().Hurt(firstColorName);
                 }
                 //Si encuentra antes el láser que el enemigo
                 else {
