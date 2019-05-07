@@ -641,6 +641,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73b1d205ba5d0a47a72f832d473e7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: {fileID: 1271213679}
+  player2: {fileID: 993811083}
+  prism: {fileID: 1459697259}
+  radius: 25
+  prefabAzul: {fileID: 0}
+  prefabAmarillo: {fileID: 0}
+  prefabRojo: {fileID: 9180799325053702176, guid: 6a01b21eb0255544fafa9fa3bb2fd21e,
+    type: 3}
+  prefabVioleta: {fileID: 0}
+  prefabNaranja: {fileID: 0}
+  prefabVerde: {fileID: 0}
 --- !u!4 &327635200
 Transform:
   m_ObjectHideFlags: 0
@@ -1260,7 +1271,7 @@ Transform:
   m_Children:
   - {fileID: 1283617908}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1016602621
 SpriteRenderer:
@@ -2515,7 +2526,7 @@ Transform:
   m_Children:
   - {fileID: 21285185}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989395707
 GameObject:
