@@ -2156,12 +2156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca2aedf052194e41bfd3b76ca816746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForward: 105
-  moveBackward: 107
-  moveRight: 108
-  moveLeft: 106
-  shootKey: 13
-  swapColor: 39
+  moveForward: Forward2
+  moveBackward: Backward2
+  moveRight: Right2
+  moveLeft: Left2
+  shootKey: Shoot2
+  swapColor: Swap2
   spritePlayer: {fileID: 1973263826}
   speedRotation: 200
   speedForward: 5
@@ -2909,12 +2909,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca2aedf052194e41bfd3b76ca816746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForward: 119
-  moveBackward: 115
-  moveRight: 100
-  moveLeft: 97
-  shootKey: 116
-  swapColor: 121
+  moveForward: Forward1
+  moveBackward: Backward1
+  moveRight: Right1
+  moveLeft: Left1
+  shootKey: Shoot1
+  swapColor: Swap1
   spritePlayer: {fileID: 1016602619}
   speedRotation: 200
   speedForward: 5

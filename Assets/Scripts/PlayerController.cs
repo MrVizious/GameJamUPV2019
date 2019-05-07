@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private KeyCode moveForward;
-    [SerializeField] private KeyCode moveBackward;
-    [SerializeField] private KeyCode moveRight;
-    [SerializeField] private KeyCode moveLeft;
-    [SerializeField] private KeyCode shootKey;
-    [SerializeField] private KeyCode swapColor;
+    [SerializeField] private string moveForward;
+    [SerializeField] private string moveBackward;
+    [SerializeField] private string moveRight;
+    [SerializeField] private string moveLeft;
+    [SerializeField] private string shootKey;
+    [SerializeField] private string swapColor;
     [SerializeField] private GameObject spritePlayer;
     
     private  Animator anim;
@@ -34,12 +34,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Forward Movement
-        if (Input.GetKey(moveForward))
+        if (Input.GetButton(moveForward))
         {
             transform.Translate(Vector2.up * Time.deltaTime * speedForward);
             anim.SetBool("isWalking",true);
         }
-        else if (Input.GetKey(moveBackward))
+        else if (Input.GetButton(moveBackward))
         {
             transform.Translate(Vector2.up * Time.deltaTime * -speedForward);
             anim.SetBool("isWalking",true);
@@ -50,18 +50,18 @@ public class PlayerController : MonoBehaviour
         }
         //Horizontal Rotation
 
-        if (Input.GetKey(moveRight))
+        if (Input.GetButton(moveRight))
         {
             transform.Rotate(new Vector3(0, 0, -speedRotation * Time.deltaTime));
             angle+=-speedRotation * Time.deltaTime;
         }
-        else if (Input.GetKey(moveLeft))
+        else if (Input.GetButton(moveLeft))
         {
             transform.Rotate(new Vector3(0, 0, speedRotation * Time.deltaTime));
             angle+= speedRotation * Time.deltaTime;
         }
 
-        if (Input.GetKey(shootKey))
+        if (Input.GetButton(shootKey))
         {
             shoot=true;
         }
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
             shoot=false;
         }
 
-        if(Input.GetKeyDown(swapColor))
+        if(Input.GetButtonDown(swapColor))
         {
             this.gameObject.GetComponent<PlayerCharacter>().nextColor();
         }
