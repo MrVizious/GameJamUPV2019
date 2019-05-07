@@ -14,7 +14,7 @@ public class SceneController : MonoBehaviour
     }
 
     public void LoadSecret(){
-        SceneManager.LoadScene("SecretScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("CamaraSecreta", LoadSceneMode.Single);
     }
 
     public void Quit(){
