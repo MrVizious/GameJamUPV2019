@@ -11,9 +11,18 @@ public class Prism : MonoBehaviour
     }
 
     public void addColor(string color){
-        if(color == "Azul") azulStrong = true;
-        else if(color == "Amarillo") amarilloStrong = true;
-        else if(color == "Rojo") rojoStrong = true;
+        if(color == "Azul"){
+            azulStrong = true;
+            transform.Find("AltarLightsAzul").gameObject.SetActive(true);
+        }
+        else if(color == "Amarillo"){
+            amarilloStrong = true;
+            transform.Find("AltarLightsAmarillo").gameObject.SetActive(true);
+        }
+        else if(color == "Rojo"){
+            rojoStrong = true;
+            transform.Find("AltarLightsRojo").gameObject.SetActive(true);
+        }
 
         if(azulStrong && amarilloStrong && rojoStrong) GameOver();
     }
