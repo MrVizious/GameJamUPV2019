@@ -45,4 +45,12 @@ public class UIController : MonoBehaviour
     {
      	colorsObjectTwo.GetComponent<Image>().sprite=colorSprites[color];
     }
+
+    private void OnDestroy()
+    {
+        Messenger<int>.RemoveListener(GameEvent.PLAYER_ONE_HURT, One_Life_Update);
+        Messenger<int>.RemoveListener(GameEvent.PLAYER_TWO_HURT, Two_Life_Update);
+        Messenger<int>.RemoveListener(GameEvent.PLAYER_ONE_COLOR, One_Color_Update);
+        Messenger<int>.RemoveListener(GameEvent.PLAYER_TWO_COLOR, Two_Color_Update);
+    }
 }

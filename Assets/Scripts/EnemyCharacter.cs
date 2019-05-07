@@ -9,10 +9,8 @@ public class EnemyCharacter : MonoBehaviour
     public string color;
 
     public void Hurt(string rayColor){
-        Debug.Log("Recibiendo daño de color " + rayColor);
         if(rayColor == color){
             health -= damage * Time.deltaTime;
-            Debug.Log("Daño hecho porque este enemigo es de color " + color);
         }
         if(health <= 0f) Die();
         //Debug.Log("Life: "+ health);
