@@ -435,3 +435,39 @@ System memory in use after: 33.0 MB.
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1953.
 Total: 2.438011 ms (FindLiveObjects: 0.096260 ms CreateObjectMapping: 0.027940 ms MarkObjects: 2.260081 ms  DeleteObjects: 0.053090 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001728 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.472 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1430 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.0 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1956.
+Total: 1.787891 ms (FindLiveObjects: 0.107080 ms CreateObjectMapping: 0.033040 ms MarkObjects: 1.592491 ms  DeleteObjects: 0.054690 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 33.0 MB.
+System memory in use after: 33.0 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1956.
+Total: 1.637761 ms (FindLiveObjects: 0.116960 ms CreateObjectMapping: 0.028250 ms MarkObjects: 1.462931 ms  DeleteObjects: 0.029170 ms)
+
