@@ -1,15 +1,27 @@
 fileFormatVersion: 2
 guid: c5dcf8f232a73a2489a8af026edc3a7c
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: abogado atras animado total_0
-    21300002: abogado atras animado total_1
-    21300004: abogado atras animado total_2
-    21300006: abogado atras animado total_3
-    21300008: abogado atras animado total_4
-    21300010: abogado atras animado total_5
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: abogado atras animado total_0
+  - first:
+      213: 21300002
+    second: abogado atras animado total_1
+  - first:
+      213: 21300004
+    second: abogado atras animado total_2
+  - first:
+      213: 21300006
+    second: abogado atras animado total_3
+  - first:
+      213: 21300008
+    second: abogado atras animado total_4
+  - first:
+      213: 21300010
+    second: abogado atras animado total_5
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -29,6 +41,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -60,11 +73,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -75,7 +92,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,6 +104,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -105,6 +124,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: eda537cbd05f2f744927bbc898355a9c
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -125,6 +145,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e133bb6f3f8002949b9d069d59291224
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -145,6 +166,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5a2ad1935d9c38440b05cd62ae626490
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -165,6 +187,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a840f82aa3550ab47ac33590342b5ca3
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -185,6 +208,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a33348e0432a48f42aaae615de1a3c53
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -205,6 +229,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c1e675ac93e9fa147aefce31c7a18bdd
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -213,10 +238,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: c9dfd0cffafec814f9ece08707e879ff
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
