@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: e38f8722dd4704d469e2bd0072b5e987
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: abogado frente animado total_0
+    21300002: abogado frente animado total_1
+    21300004: abogado frente animado total_2
+    21300006: abogado frente animado total_3
+    21300008: abogado frente animado total_4
+    21300010: abogado frente animado total_5
+    21300012: abogado frente animado total_6
+    21300014: abogado frente animado total_7
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: abogado frente animado total_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 29
+        width: 266
+        height: 453
+      alignment: 9
+      pivot: {x: 0.43989775, y: 0.5000005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc829407fd4e5d48aeb1b904ffd95c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_1
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 23
+        width: 265
+        height: 454
+      alignment: 9
+      pivot: {x: 0.43967077, y: 0.5058692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11c74c1a77f7a54382ec36626e1be0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_2
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 23
+        width: 266
+        height: 461
+      alignment: 9
+      pivot: {x: 0.43989757, y: 0.5000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ed49de47162bf44bfaf0c565f5a3bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_3
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 23
+        width: 267
+        height: 454
+      alignment: 9
+      pivot: {x: 0.4501025, y: 0.49413115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22acb7568a13ab24e98ee98973bd4e8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_4
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 29
+        width: 265
+        height: 446
+      alignment: 9
+      pivot: {x: 0.43967056, y: 0.49402577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa73987fe6dc3c499a60f3ce3f22daf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_5
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 29
+        width: 265
+        height: 448
+      alignment: 9
+      pivot: {x: 0.42961565, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb72850f3310db419b50ffbf21a1d00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_6
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 29
+        width: 265
+        height: 450
+      alignment: 9
+      pivot: {x: 0.42961565, y: 0.5000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102bb549c67291144ae917241c80057c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abogado frente animado total_7
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 31
+        width: 266
+        height: 444
+      alignment: 9
+      pivot: {x: 0.4198613, y: 0.49399906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029c0ddbf099125448965f8ac06a742a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e4682de3e5536034b933870b8fb86a42
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
